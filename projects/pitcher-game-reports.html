@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pitching Ultra | K’s Baseball</title>
+
+  <!-- Fonts + your main stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Optional: project-page-specific tweaks -->
+  <style>
+    .hero{background:#fff;border:1.5px solid #e5e0d6;border-radius:12px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,.04);margin-bottom:18px}
+    .hero img{width:100%;display:block;border-radius:8px}
+    .case-grid{display:grid;gap:18px;grid-template-columns:1fr}
+    @media(min-width:900px){.case-grid{grid-template-columns:2fr 1fr}}
+    .panel{background:#fff;border:1.5px solid #e5e0d6;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+    .btns a{display:inline-block;margin-right:12px;margin-top:8px;font-weight:700;color:#0066cc;border-bottom:2px solid transparent;text-decoration:none}
+    .btns a:hover{border-bottom-color:currentColor}
+    .crumb{margin-bottom:10px;opacity:.75;font-size:.92rem}
+    .crumb a{color:inherit;border-bottom:1px solid currentColor;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Reuse your header -->
+    <header class="site-header">
+      <div class="inner">
+        <h1 class="brand">K’s Baseball</h1>
+        <img class="logo" src="../images/logo.png" alt="K's logo">
+      </div>
+    </header>
+
+    <!-- Project content -->
+    <section class="section">
+      <div class="crumb"><a href="../index.html">← Back to Projects</a></div>
+      <h2 class="section-title">Pitcher Game Reports</h2>
+
+      <!-- Hero image -->
+      <div class="hero">
+        <img src="/images/pitcher-game-reports-images/gerrit-cole.png" alt="Pitching Ultra report screenshot">
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="text-panel">
+        <article class="panel">
+        This project focused on creating pitcher game reports to better visualize individual performances. The goal was to provide a tool that highlights how elite pitchers achieve their results. Using R to scrape game data, I built a script that filters, cleans, and analyzes the necessary information, then generates a series of plots to capture key aspects of a pitcher’s outing.
+        The workflow began with a parameter-based filtering system to select pitchers and isolate their performance on a specific day. To improve readability, I also created a custom pitch “library” with consistent color coding across all visualizations. From there, the script produced several plots:
+      <ul>
+        <li>Movement plot – displays pitch movement, with point size scaled to usage, offering insight into a pitcher’s arsenal and movement profile.</li>
+        <li>Usage donut chart by handedness – shows how a pitcher’s arsenal and approach differ against left- and right-handed batters. </li>Usage donut chart by handedness – shows how a pitcher’s arsenal and approach differ against left- and right-handed batters.
+        <li>Velocity boxplot – highlights velocity ranges for each pitch type to capture what the pitcher had working that day.</li>
+        <li>Strike zone command plot – visualizes pitch location patterns to reveal how pitchers attack the zone and where they prefer to throw.</li>
+       <li>Pitching line table – provides traditional box score context alongside the advanced visuals.</li>
+      </ul>
+      After generating these plots, I used a complementary Python script to assemble them into a single 1600x900 PNG image, making the reports easy to share on social media.
+      Overall, this system produces concise, visually rich reports that allow users to quickly understand not just what results a pitcher achieved, but why they were successful—offering valuable perspective on what it takes to perform at the highest level.
+      </div>
+    </section>
+
+<section class="about-me section">
+        <details class="about-toggle">
+            <summary class="section-title">
+                 Notable Pitching Performances
+                 <span class="chevron" aria-hidden="true"></span>
+             </summary>
+    <div class="hero">
+        <img src="/images/pitcher-game-reports-images/sonny-gray.png" alt="Pitching Ultra report screenshot">
+    </div>
+    <div class="hero">
+        <img src="/images/pitcher-game-reports-images/blake-snell.png" alt="Pitching Ultra report screenshot">
+    </div>
+    <div class="hero">
+        <img src="/images/pitcher-game-reports-images/domingo-german.png" alt="Pitching Ultra report screenshot">
+    </div>
+    <div class="hero">
+        <img src="/images/pitcher-game-reports-images/spencer-strider.png" alt="Pitching Ultra report screenshot">
+    </div>
+    <div class="hero">
+        <img src="/images/pitcher-game-reports-images/jacob-degrom.png" alt="Pitching Ultra report screenshot">    
+    </div>
+    <div class="hero">
+        <img src="/images/pitcher-game-reports-images/lucas-giolito.png" alt="Pitching Ultra report screenshot">   
+    </div> 
+    <div class="hero">
+        <img src="/images/pitcher-game-reports-images/shane-bieber.png" alt="Pitching Ultra report screenshot">   
+    </div> 
+       </details>
+</section>
+
+  <div class="btns">
+    <a href="https://github.com/inakisardina/MLB-Game-Reports" target="_blank" rel="noopener">View on GitHub →</a>
+  </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

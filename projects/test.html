@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pitching Ultra | K’s Baseball</title>
+
+  <!-- Fonts + your main stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Optional: project-page-specific tweaks -->
+  <style>
+    .hero{background:#fff;border:1.5px solid #e5e0d6;border-radius:12px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,.04);margin-bottom:18px}
+    .hero img{width:100%;display:block;border-radius:8px}
+    .case-grid{display:grid;gap:18px;grid-template-columns:1fr}
+    @media(min-width:900px){.case-grid{grid-template-columns:2fr 1fr}}
+    .panel{background:#fff;border:1.5px solid #e5e0d6;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+    .btns a{display:inline-block;margin-right:12px;margin-top:8px;font-weight:700;color:#0066cc;border-bottom:2px solid transparent;text-decoration:none}
+    .btns a:hover{border-bottom-color:currentColor}
+    .crumb{margin-bottom:10px;opacity:.75;font-size:.92rem}
+    .crumb a{color:inherit;border-bottom:1px solid currentColor;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Reuse your header -->
+    <header class="site-header">
+      <div class="inner">
+        <h1 class="brand">K’s Baseball</h1>
+        <img class="logo" src="../images/logo.png" alt="K's logo">
+      </div>
+    </header>
+
+    <!-- Project content -->
+    <section class="section">
+      <div class="crumb"><a href="../index.html">← Back to Projects</a></div>
+      <h2 class="section-title">Pitching Ultra</h2>
+
+      <!-- Text box under hero -->
+<div class="hero-textbox">
+  <h3>Pitching Ultra</h3>
+  <p>
+    As part of my role as a Baseball Analytics Intern at the University of Miami, I created complete stat lines for each pitcher, covering individual seasons and career totals. Building on this foundation, I developed Pitching Ultra, an advanced player evaluation tool built in R using TrackMan pitch-level data. The project began with cleaning and standardizing the raw data, followed by constructing a comprehensive evaluation model.
+  </p>
+    Pitching Ultra is a composite “plus” statistic (league average = 100) that integrates multiple performance dimensions: expected results, command ability, actual results, and a proprietary “stuff” grading system that measures pitch effectiveness. I used this model to evaluate both our own pitchers’ performance and potential transfer portal targets.
+  </p>
+    The model produces both single-season and career metrics, enabling evaluation across different timeframes. For this project, I analyzed data from the 2024 season and the first half of 2025—both separately, to track year-to-year progression or regression, and combined, to evaluate overall performance. Scores above 100 indicate above-average performance, while scores below 100 indicate below-average performance.
+    In addition to the composite metric, I evaluated pitchers’ performance by pitch count, including how often they fall behind, their first-pitch strike rate, and their ability to recover when behind in the count.
+    <p>
+    As part of the Pitching Ultra Evaluation Report, I designed custom visualizations to highlight what makes each pitcher unique. These graphics break down key characteristics, show pitch-type strengths, and detail the specific factors contributing to each pitcher’s Pitching Ultra grade, providing a deeper, more intuitive understanding of their profile.
+    <p>
+
+      <!-- Hero image -->
+      <div class="hero">
+        <img src="/images/pitching-ultra-images/best_pitching_ultra_draftees.jpg" alt="Pitching Ultra report screenshot">
+      </div>
+    </div>
+
+<h4 class="bubble-title">Stuff+</h4>
+      <!-- Two-column layout -->
+<div class="case-grid">
+      <!-- Image panel -->
+    <aside class="panel image-panel">
+         <img src="/images/pitching-ultra-images/liam-doyle-pitch-movement.png" alt="Pitching Ultra" />
+    </aside>
+  <!-- Text panel -->
+  <article class="panel text-panel">
+    <p>As part of the Pitching Ultra model, I developed a Baseball Savant–style plot that maps each pitcher’s average pitch movement against the league average.</p>  
+    <p>visualization played a key role in building the Stuff+ model. The results showed that pitches clustered around league-average movement generally produced much weaker outcomes, while pitches that deviated significantly from average tended to perform better.</p>  
+    <p>This makes intuitive sense—hitters are more accustomed to “average” pitches and thus handle them more effectively, whereas outlier pitches with unusual movement generate stronger results and improved performance.</p>
+  </article>
+</div>
+
+
+ <!-- Two-column layout -->
+<div class="case-grid">
+  <!-- Text panel 2 -->
+  <article class="panel text-panel">
+    To Test the validity of my Stuff+ metric, I ran a series of correlation analyses to see whether pitchers with higher Stuff+ scores also produced stronger results. Strikeout percentage (K%) is a natural benchmark here, since pitchers with better raw stuff should generate more whiffs and, in turn, more strikeouts. The correlation test showed a positive relationship: Stuff+ and K% correlated at 0.21. While not overwhelming, this is a meaningful sign that pitchers with better stuff do tend to record more strikeouts—though it also reinforces that stuff is just one piece of the puzzle, not the only factor driving performance.
+    Beyond strikeouts, quality stuff should also make it harder for hitters to square the ball up. If hitters struggle against elite movement and velocity, they’re more likely to produce weak contact. To test this, I ran a correlation between Stuff+ and soft contact rate, which returned a smaller but still positive relationship (0.13). Again, this shows that while Stuff+ is valuable, it alone doesn’t explain everything.
+    That’s why the Pitching Ultra model integrates multiple components. Stuff+ is paired with Command+, and together they feed into Pitching+, a more holistic measure that has shown strong correlations with key outcome stats such as FIP.
+</article>
+    <!-- Image panel -->
+  <aside class="panel image-panel">
+    <img src="/images/pitching-ultra-images/testtest.png" alt="Pitching Ultra" />
+  </aside>
+</div>  
+
+<h4 class="bubble-title">Command+</h4>
+ <!-- Two-column layout -->
+<div class="case-grid">
+  <!-- Image panel -->
+  <aside class="panel image-panel">
+    <img src="/images/pitching-ultra-images/liam-doyle-command.png" alt="Pitching Ultra" />
+  </aside>
+  <!-- Text panel 2 -->
+  <article class="panel text-panel">
+ Hello 
+  </article>
+</div>
+ <div class="btns">
+      <a href="https://github.com/inakisardina/NCAA-Player-Evaluation-Model" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+    </section>
+  </main>
+</body>
+</html>

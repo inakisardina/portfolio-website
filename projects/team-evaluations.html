@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Franchise Evaluations | K’s Baseball</title>
+
+  <!-- Fonts + main stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/cd1ff12a61d0f65ad3079a7c7461b61f?family=Oilvare+Base" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Page-specific helpers (same pattern as Pitching Ultra) -->
+  <style>
+    .hero{background:#fff;border:1.5px solid #e5e0d6;border-radius:12px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,.04);margin-bottom:18px}
+    .hero img{width:100%;display:block;border-radius:8px}
+    .case-grid{display:grid;gap:18px;grid-template-columns:1fr}
+    @media(min-width:900px){.case-grid{grid-template-columns:2fr 1fr}}
+    .panel{background:#fff;border:1.5px solid #e5e0d6;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+    .btns a{display:inline-block;margin-right:12px;margin-top:8px;font-weight:700;color:#0066cc;border-bottom:2px solid transparent;text-decoration:none}
+    .btns a:hover{border-bottom-color:currentColor}
+    .crumb{margin-bottom:10px;opacity:.75;font-size:.92rem}
+    .crumb a{color:inherit;border-bottom:1px solid currentColor;text-decoration:none}
+
+    /* grid of team cards (uses your project-card styles) */
+    .teams-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:18px;
+      margin-top:14px;
+    }
+    /* logos shouldn’t be cropped */
+    .project-card.logo-card img{
+      aspect-ratio:16/9;
+      object-fit:contain;
+      background:#fff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Header (same markup as your other project page) -->
+    <header class="site-header">
+      <div class="inner">
+        <h1 class="brand">K’s Baseball</h1>
+        <!-- IMPORTANT: this file lives in /projects, so use ../ for root assets -->
+        <img class="logo" src="../images/logo.png" alt="K's logo">
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="section">
+      <div class="crumb"><a href="../index.html">← Back to Projects</a></div>
+      <h2 class="section-title">Franchise Evaluations</h2>
+
+<div class="hero-textbox">
+<p>I worked on this project to evaluate the trenghts and weaknesses of each MLB Franchise</p>
+</div>
+
+  <main>
+    <section class="section">
+      <h2 class="section-title">Teams</h2>
+
+      <div class="teams-grid">
+        <!-- Miami Marlins-->
+        <a class="project-card logo-card" href="filler.html">
+          <img src="../images/team-evaluations/Team-evals-Marlins.png" alt="Miami Marlins Logo" loading="lazy">
+          <div class="project-meta">
+            <h3>Miami Marlins</h3>
+            <p>Franchise Evaluation</p>
+          </div>
+        <!-- Arizona Diamondbacks-->
+        <a class="project-card logo-card" href="filler.html">
+          <img src="../images/team-evaluations/Team-evals-diamondbacks.png" alt="D-Backs Logo" loading="lazy">
+          <div class="project-meta">
+            <h3>Arizona Diamondbacks</h3>
+            <p>Franchise Evaluation</p>
+          </div>
+           <!-- Houston Astros-->
+        <a class="project-card logo-card" href="filler.html">
+          <img src="../images/team-evaluations/Team-evals-astros.png" alt="Astros Logo" loading="lazy">
+          <div class="project-meta">
+            <h3>Houston Astros</h3>
+            <p>Franchise Evaluation</p>
+          </div>
+    </a>
+  </div>
+</section> 
+  </main>
+</body>
+</html>

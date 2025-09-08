@@ -1,0 +1,347 @@
+:root{
+  --bg: #f4eee5;          /* light tan */
+  --ink: #111;            /* near-black text */
+  --line: #cfc7bc;        /* divider line */
+  --accent: #000;         /* headings */
+  --max: 1100px;          /* content width */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+a:hover { border-bottom-color: currentColor; }
+
+/* ========== 2) HEADER ========== */
+.site-header { padding: 24px 16px 12px; }
+.site-header .inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.brand {
+  font-size: clamp(28px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+.logo {
+  width: clamp(48px, 8vw, 80px);
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========== 3) LAYOUT / SECTIONS ========== */
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 8px 16px 48px;
+}
+.section {
+  padding: 18px 0 36px;
+  border-top: 3px solid var(--line);
+}
+.section:first-of-type { margin-top: 8px; }
+
+/* Single authoritative .section-title (Oilvare Base) */
+.section-title {
+  font-family: "Oilvare Base", sans-serif;
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: normal;
+  margin: 6px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ========== 4) ABOUT (dropdown/accordion) ========== */
+.about-me.section { padding-top: 0; }
+.about-toggle { border-top: 3px solid var(--line); padding-top: 12px; }
+.about-toggle > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
+}
+.about-toggle > summary::-webkit-details-marker { display: none; }
+.chevron {
+  width: 10px; height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 8px;
+  transition: transform 200ms ease;
+}
+.about-toggle[open] .chevron { transform: rotate(45deg); }
+.about-content {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  margin-top: 14px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 260ms ease, padding 200ms ease, margin 200ms ease, border-color 200ms ease;
+  padding: 0 22px;
+  border-color: transparent;
+}
+.about-toggle[open] .about-content {
+  max-height: 800px;
+  padding: 18px 22px;
+  border-color: #e0e0e0;
+}
+.about-content p { margin-bottom: 1rem; }
+
+/* ========== 5) PROJECTS — THUMBNAIL GRID ========== */
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+.project-card{
+  display: block;
+  background: #fff;
+  border: 1.5px solid #e5e0d6;
+  border-radius: 12px;
+  overflow: hidden;
+  color: inherit;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.project-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  border-color: #d6cfc4;
+}
+.project-card img{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+.project-meta{ padding: 12px 14px 14px; }
+.project-meta h3{
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.project-meta p{
+  margin: 0;
+  opacity: .8;
+  font-size: .92rem;
+}
+
+/* ========== 6) THIS PAGE: HERO + STACK ORDER ========== */
+.hero-textbox {
+  background: #fff;
+  border: 1.5px solid #e5e0d6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  margin-top: 16px;        /* spacing above hero image */
+  text-align: justify;
+  line-height: 1.6;
+}
+.hero {
+  margin-top: 8px;         /* small separation from textbox */
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+
+/* ========== 7) SIDE-BY-SIDE PANELS ========== */
+/* Base card style (used by both image and text panels) */
+.panel {
+  background: #fff;
+  border: 1.5px solid #e5e0d6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+
+.text-panel {
+  text-align: justify;   /* aligns text evenly left & right */
+  line-height: 1.6;      /* improves readability */
+  margin-bottom: 16px;   /* optional: spacing below panel */
+}
+
+/* Flex row that holds image + text */
+.case-grid {
+  display: grid;
+  gap: 20px;
+  align-items: stretch;     /* keep heights aligned when possible */        
+  margin-top: 18px;         /* space from what’s above */
+}
+
+@media (min-width: 900px){
+  .case-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+/* ensure panels fill the row height */
+.panel{
+  height: 100%;
+  display: flex;                   /* keeps inner content tidy */
+  flex-direction: column;
+}
+
+/* Child panels */
+.image-panel { 
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;               /* avoid double padding around the image */
+}
+.image-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+.text-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* If you place multiple case-grid blocks back-to-back */
+.case-grid + .case-grid { margin-top: 18px; }
+
+/* Optional: auto-flip the SECOND block’s order on desktop, keeps mobile stacked */
+@media (min-width: 900px) {
+  .case-grid:nth-of-type(2) { flex-direction: row-reverse; }
+}
+
+/* ---- Responsive: stack on small screens ---- */
+@media (max-width: 800px) {
+  .case-grid { flex-direction: column; }
+  .image-panel, .text-panel { flex-basis: 100%; }
+}
+
+.teams-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.teams-grid{
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.project-card.logo-card img{
+  display: block;
+  background: #f4eee5;
+  border: 1.5px solid #e5e0d6;
+  border-radius: 12px;
+  overflow: hidden;
+  color: inherit;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+
+/* Dividers */
+
+  .bubble-title {
+    display: inline-block;      /* makes the bubble fit the text */
+    padding: 8px 16px;          /* space inside the bubble */
+    background-color: #fc8803;  /* bubble background color */
+    border-radius: 5px;        /* rounded edges = bubble look */
+    border: 1px solid #ccc;     /* optional border */
+    font-family: Arial, sans-serif;
+    margin-top: 15px;  
+    margin-bottom: -15px;
+  }
+
+
+  .bubble-title-big {
+    display: inline-block;      /* makes the bubble fit the text */
+    padding: 14px 28px;          /* space inside the bubble */
+    background-color: #fc8803;  /* bubble background color */
+    border-radius: 5px;        /* rounded edges = bubble look */
+    border: 1px solid #262222;     /* optional border */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 15px;  
+    margin-bottom: -20px;
+  }
+
+  .bubble-title-huge {
+    display: inline-block;      /* makes the bubble fit the text */
+    padding: 14px 28px;          /* space inside the bubble */
+    background-color: #ffffff;  /* bubble background color */
+    border-radius: 5px;        /* rounded edges = bubble look */
+    border: 1px solid #c6bdbd;     /* optional border */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 15px;  
+    margin-bottom: -20px;
+  }
+
+
+
+
+.mini-hero { 
+  max-width: 700px;       /* cap its size */
+  margin: 16px auto;       /* center it */
+}
+
+.mini-hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06); /* even softer shadow */
+}
+
+.image-row {
+  display: flex;         /* puts children side by side */
+  gap: 16px;             /* space between the images */
+  justify-content: center; /* center them horizontally */
+  align-items: center;
+  margin-top: 24px;   
+}
+
+.image-row img {
+  width: 45%;            /* make them smaller so they fit */
+  height: auto;          /* keep proportions */
+  border-radius: 8px;    /* optional styling */
+}
+
+
+.wide-hero { 
+  max-width: auto;       /* cap its size */
+  margin: 16px auto;       /* center it */
+}
+
+.wide-hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06); /* even softer shadow */
+}

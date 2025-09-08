@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pitching Ultra | K’s Baseball</title>
+
+  <!-- Fonts + your main stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css" />
+
+</head>
+<body>
+  <main>
+    <!-- Reuse your header -->
+    <header class="site-header">
+      <div class="inner">
+        <h1 class="brand">K’s Baseball</h1>
+        <img class="logo" src="../../images/logo.png" alt="K's logo">
+      </div>
+    </header>
+
+    <!-- Project content -->
+    <section class="section">
+      <div class="crumb"><a href="../team-evaluations.html">← Back to Franchise Evaluations</a></div>
+      <h2 class="section-title">Miami Marlins</h2>
+
+      <!-- Text box under hero -->
+<div class="hero-textbox">
+  <h3>Pitching Ultra</h3>
+  <p>
+    As part of my role as a Baseball Analytics Intern at the University of Miami, I created complete stat lines for each pitcher, covering individual seasons and career totals. Building on this foundation, I developed Pitching Ultra, an advanced player evaluation tool built in R using TrackMan pitch-level data. The project began with cleaning and standardizing the raw data, followed by constructing a comprehensive evaluation model.
+  </p>
+    Pitching Ultra is a composite “plus” statistic (league average = 100) that integrates multiple performance dimensions: expected results, command ability, actual results, and a proprietary “stuff” grading system that measures pitch effectiveness. I used this model to evaluate both our own pitchers’ performance and potential transfer portal targets.
+  </p>
+    The model produces both single-season and career metrics, enabling evaluation across different timeframes. For this project, I analyzed data from the 2024 season and the first half of 2025—both separately, to track year-to-year progression or regression, and combined, to evaluate overall performance. Scores above 100 indicate above-average performance, while scores below 100 indicate below-average performance.
+    In addition to the composite metric, I evaluated pitchers’ performance by pitch count, including how often they fall behind, their first-pitch strike rate, and their ability to recover when behind in the count.
+    <p>
+    As part of the Pitching Ultra Evaluation Report, I designed custom visualizations to highlight what makes each pitcher unique. These graphics break down key characteristics, show pitch-type strengths, and detail the specific factors contributing to each pitcher’s Pitching Ultra grade, providing a deeper, more intuitive understanding of their profile.
+    <p>
+</div>
+
+      <!-- Hero image -->
+      <div class="hero">
+        <img src="/images/pitching-ultra-images/best_pitching_ultra_draftees.jpg" alt="Pitching Ultra report screenshot">
+      </div>
+
+      <!-- Two-column layout -->
+<div class="case-grid">
+      <!-- Image panel -->
+    <aside class="panel image-panel">
+         <img src="/images/pitching-ultra-images/liam-doyle-pitch-movement.png" alt="Pitching Ultra" />
+    </aside>
+
+  <!-- Text panel -->
+  <article class="panel text-panel">
+    <h3>Overview</h3>
+    <p>Pitching Ultra combines results-based (Pitching+) and expected performance (XPitching+) into one evaluator using TrackMan pitch-level data. Outputs power coach-facing reports and leaderboards.</p>
+
+    <h3>Problem</h3>
+    <p>Coaches needed a unified way to compare pitchers across profiles without losing context (pitch mix, command, quality of contact).</p>
+
+    <h3>Approach</h3>
+    <ul>
+      <li>Cluster pitches by shape to estimate expected CSW% by type/context</li>
+      <li>Command+ from zone templates & miss-distance per pitch type</li>
+      <li>Aggregate to pitcher-level with usage-based weighting</li>
+    </ul>
+
+    <h3>Results</h3>
+    <ul>
+      <li>Improved comparison vs. baseline metrics in validation tests</li>
+      <li>Automated R Markdown reports (usage, movement comps, heatmaps)</li>
+    </ul>
+  </article>
+  </div>
+  
+ <!-- Two-column layout -->
+<div class="case-grid">
+  <!-- Image panel -->
+  <aside class="panel image-panel">
+    <img src="/images/pitching-ultra-images/liam-doyle-command.png" alt="Pitching Ultra" />
+  </aside>
+  <!-- Text panel 2 -->
+  <article class="panel text-panel">
+    <h3>Overview</h3>
+    <p>Pitching Ultra combines results-based (Pitching+) and expected performance (XPitching+) into one evaluator using TrackMan pitch-level data. Outputs power coach-facing reports and leaderboards.</p>
+
+    <h3>Problem</h3>
+    <p>Coaches needed a unified way to compare pitchers across profiles without losing context (pitch mix, command, quality of contact).</p>
+
+    <h3>Approach</h3>
+    <ul>
+      <li>Cluster pitches by shape to estimate expected CSW% by type/context</li>
+      <li>Command+ from zone templates & miss-distance per pitch type</li>
+      <li>Aggregate to pitcher-level with usage-based weighting</li>
+    </ul>
+
+    <h3>Results</h3>
+    <ul>
+      <li>Improved comparison vs. baseline metrics in validation tests</li>
+      <li>Automated R Markdown reports (usage, movement comps, heatmaps)</li>
+    </ul>
+  </article>
+</div>
+ <div class="btns">
+      <a href="https://github.com/inakisardina/NCAA-Player-Evaluation-Model" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+    </section>
+  </main>
+</body>
+</html>
