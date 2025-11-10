@@ -27,104 +27,98 @@
 
       <!-- Text box under hero -->
 <div class="hero-textbox">
-  <h3>Pitching Ultra</h3>
-  <p>
-    As part of my role as a Baseball Analytics Intern at the University of Miami, I created complete stat lines for each pitcher, covering individual seasons and career totals. Building on this foundation, I developed Pitching Ultra, an advanced player evaluation tool built in R using TrackMan pitch-level data. The project began with cleaning and standardizing the raw data, followed by constructing a comprehensive evaluation model.
-  </p>
-    Pitching Ultra is a composite “plus” statistic (league average = 100) that integrates multiple performance dimensions: expected results, command ability, actual results, and a proprietary “stuff” grading system that measures pitch effectiveness. I used this model to evaluate both our own pitchers’ performance and potential transfer portal targets.
-  </p>
-    The model produces both single-season and career metrics, enabling evaluation across different timeframes. For this project, I analyzed data from the 2024 season and the first half of 2025—both separately, to track year-to-year progression or regression, and combined, to evaluate overall performance. Scores above 100 indicate above-average performance, while scores below 100 indicate below-average performance.
-    In addition to the composite metric, I evaluated pitchers’ performance by pitch count, including how often they fall behind, their first-pitch strike rate, and their ability to recover when behind in the count.
-    <p>
-    As part of the Pitching Ultra Evaluation Report, I designed custom visualizations to highlight what makes each pitcher unique. These graphics break down key characteristics, show pitch-type strengths, and detail the specific factors contributing to each pitcher’s Pitching Ultra grade, providing a deeper, more intuitive understanding of their profile.
-    <p>
+  <h3>Franchise Overview</h3>
+  <p>After falling short of the postseason in 2024, a year removed from their World Series run, the Arizona Diamondbacks entered 2025 determined to contend again—adding former Cy Young winner Corbin Burnes (6 years, $210 million) and All-Star first baseman Josh Naylor in a bold offseason. Despite their aggressive approach, the Diamondbacks finished fourth in the NL West and missed the postseason for the third straight year. As a result, they became sellers at the trade deadline, moving key players such as Eugenio Suárez and Josh Naylor, along with other notable pieces like Jordan Montgomery and longtime frontline starter Merrill Kelly. </p>
+   
+  <p>The Diamondbacks finished with a +6 run differential, ranking 18th in MLB. Their strong offense powered that result, finishing sixth in baseball in runs scored and second in the NL West behind the division-champion Dodgers. However, run prevention proved to be their biggest issue in 2025, as Arizona ranked 24th in runs allowed.</p>
 </div>
 
   <div class="hero">
-    <img src="../images/pitcher-game-reports-images/sonny-gray.png" alt="Pitching Ultra report screenshot">
+    <img src="../../images/team-evaluations/ari/ari_overview.png" alt="Arizona Diamondbacks overview chart">
   </div>
 
+<div class="hero-textbox">
+  <h3>Pitching Evaluation</h3>
+  <p>The  </p>
+   
+  The Diamondbacks' pitching rotation boasts a blend of power arms and crafty veterans, providing a solid foundation for the team's competitive aspirations in the National League West.</p>
+</div>
 
-
-
-
+      <!-- Embedded interactive visualization -->
 <iframe 
   src="../../images/team-evaluations/ari/dbacks_best_pitchers_2025.html" 
   width="100%" 
-  height="425px" 
+  height="430px" 
   style="border:none; overflow:hidden;">
 </iframe>
 
+<iframe 
+  src="../../images/team-evaluations/ari/lastthree_dbacks_best_pitchers_2025.html" 
+  width="100%" 
+  height="430px" 
+  style="border:none; overflow:hidden;">
+</iframe>
 
-
-
-      <!-- Hero image -->
-      <div class="hero">
-        <img src="/images/pitching-ultra-images/best_pitching_ultra_draftees.jpg" alt="Pitching Ultra report screenshot">
-      </div>
-
-      <!-- Two-column layout -->
-<div class="case-grid">
-      <!-- Image panel -->
-    <aside class="panel image-panel">
-         <img src="/images/pitching-ultra-images/liam-doyle-pitch-movement.png" alt="Pitching Ultra" />
-    </aside>
-
-  <!-- Text panel -->
-  <article class="panel text-panel">
-    <h3>Overview</h3>
-    <p>Pitching Ultra combines results-based (Pitching+) and expected performance (XPitching+) into one evaluator using TrackMan pitch-level data. Outputs power coach-facing reports and leaderboards.</p>
-
-    <h3>Problem</h3>
-    <p>Coaches needed a unified way to compare pitchers across profiles without losing context (pitch mix, command, quality of contact).</p>
-
-    <h3>Approach</h3>
-    <ul>
-      <li>Cluster pitches by shape to estimate expected CSW% by type/context</li>
-      <li>Command+ from zone templates & miss-distance per pitch type</li>
-      <li>Aggregate to pitcher-level with usage-based weighting</li>
-    </ul>
-
-    <h3>Results</h3>
-    <ul>
-      <li>Improved comparison vs. baseline metrics in validation tests</li>
-      <li>Automated R Markdown reports (usage, movement comps, heatmaps)</li>
-    </ul>
-  </article>
-  </div>
-  
- <!-- Two-column layout -->
-<div class="case-grid">
-  <!-- Image panel -->
-  <aside class="panel image-panel">
-    <img src="/images/pitching-ultra-images/liam-doyle-command.png" alt="Pitching Ultra" />
-  </aside>
-  <!-- Text panel 2 -->
-  <article class="panel text-panel">
-    <h3>Overview</h3>
-    <p>Pitching Ultra combines results-based (Pitching+) and expected performance (XPitching+) into one evaluator using TrackMan pitch-level data. Outputs power coach-facing reports and leaderboards.</p>
-
-    <h3>Problem</h3>
-    <p>Coaches needed a unified way to compare pitchers across profiles without losing context (pitch mix, command, quality of contact).</p>
-
-    <h3>Approach</h3>
-    <ul>
-      <li>Cluster pitches by shape to estimate expected CSW% by type/context</li>
-      <li>Command+ from zone templates & miss-distance per pitch type</li>
-      <li>Aggregate to pitcher-level with usage-based weighting</li>
-    </ul>
-
-    <h3>Results</h3>
-    <ul>
-      <li>Improved comparison vs. baseline metrics in validation tests</li>
-      <li>Automated R Markdown reports (usage, movement comps, heatmaps)</li>
-    </ul>
-  </article>
+<div class="hero-textbox">
+  <h3>Hitting Evaluation</h3>
+  <p>The  </p>
+   
+  The Diamondbacks' pitching rotation boasts a blend of power arms and crafty veterans, providing a solid foundation for the team's competitive aspirations in the National League West.</p>
 </div>
- <div class="btns">
-      <a href="https://github.com/inakisardina/NCAA-Player-Evaluation-Model" target="_blank" rel="noopener">View on GitHub →</a>
-    </div>
+
+      <!-- Embedded interactive visualization -->
+<iframe 
+  src="../../images/team-evaluations/ari/dbacks_best_hitters_2025.html" 
+  width="100%" 
+  height="430px" 
+  style="border:none; overflow:hidden;">
+</iframe>
+
+<iframe 
+  src="../../images/team-evaluations/ari/lastthree_dbacks_best_hitters_2025.html" 
+  width="100%" 
+  height="430px" 
+  style="border:none; overflow:hidden;">
+</iframe>
+
+<div class="hero-textbox">
+  <h3>Farm System Evaluation</h3>
+  <p>The  </p>
+   
+  The Diamondbacks' Farm System.</p>
+</div>
+
+      <!-- Embedded interactive visualization -->
+<iframe 
+  src="../../images/team-evaluations/ari/minor_leagues_best_hitters_2025.html" 
+  width="100%" 
+  height="600px" 
+  style="border:none; overflow:hidden;">
+</iframe>
+
+<iframe 
+  src="../../images/team-evaluations/ari/minor_leagues_best_pitchers_2025.html" 
+  width="100%" 
+  height="600px" 
+  style="border:none; overflow:hidden;">
+</iframe>
+
+<div class="hero-textbox">
+  <h3>Payroll Evaluation</h3>
+  <p>The  </p>
+  The Diamondbacks' Payroll Situation.</p>
+</div>
+
+  <div class="hero">
+    <img src="../../images/team-evaluations/ari/payroll_plots.png" alt="Arizona Diamondbacks overview chart">
+  </div>
+
+<div class="hero-textbox">
+  <h3>Closing Thoughts</h3>
+  <p>The  </p>
+  Free Agent Recomendation</p>
+</div>
+
+
     </section>
   </main>
-</body>
-</html>
